@@ -1,0 +1,83 @@
+.social-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  text-decoration: none;
+  color: var(--text-main);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.social-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--hover-color);
+  opacity: 0.5;
+  transition: opacity 0.3s ease, width 0.3s ease;
+}
+
+.social-card:hover::before {
+  opacity: 1;
+  width: 6px;
+}
+
+.social-card-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.icon-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-card:hover .icon-wrapper {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.details h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.details .description {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.stats-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.follower-count {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  text-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+.follower-label {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
